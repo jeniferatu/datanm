@@ -55,7 +55,7 @@ router.post('/updateUser/:no', async(req, res) => {
 
 router.get('/detailnama/:no', async(req, res) => {
     const no = req.params.no; //manggil no (no itu param) bentuknya slash /
-    const result = await db.query(`select Nama,Rekening from nama where Id=${no}`); 
+    const result = await db.query(`select Nama from daftarnama where Id=${no}`); 
     // isi dr petikan isi query spy bisa masukin variabel
     res.send(result);
 })
